@@ -1,7 +1,7 @@
 // const API_ROOT = 'https://www.reddit.com';
 
-export const getPosts = async () => {
-    const response = await fetch(`/api/r/popular.json`);
+export const getPosts = async (filter = 'hot') => {
+    const response = await fetch(`/api/${filter}.json`);
 
     if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);

@@ -11,7 +11,7 @@ export const fetchComments = createAsyncThunk(
 
 export const fetchPosts = createAsyncThunk(
     'posts/fetchPosts',
-    async () => {
+    async (filter) => {
         const posts = await getPosts();
         return posts;
     }
