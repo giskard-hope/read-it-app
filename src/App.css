@@ -89,3 +89,55 @@
 .filter-bar button:hover {
   background-color: #e9e9e9;
 }
+
+.filter-bar button.active {
+  background-color: #0079D3;
+  color: white;
+  border-color: #0079D3;
+}
+
+/* src/App.css */
+body {
+  background-color: #DAE0E6; /* Light grey background */
+  font-family: sans-serif;
+  color: #1A1A1B;
+}
+
+/* Give the header a clean look */
+header {
+  background-color: white;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Style the PostCard */
+article {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1rem;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+article:hover {
+  border-color: #898989;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+article h2 {
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+
+article p {
+  color: #878A8C; /* Secondary text color */
+  font-size: 0.8rem;
+}
+
+.modal-overlay {
+  /* ... keep existing styles ... */
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}

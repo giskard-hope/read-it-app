@@ -12,7 +12,7 @@ export const fetchComments = createAsyncThunk(
 export const fetchPosts = createAsyncThunk(
     'posts/fetchPosts',
     async (filter) => {
-        const posts = await getPosts();
+        const posts = await getPosts(filter);
         return posts;
     }
 );
@@ -33,6 +33,7 @@ const initialState = {
     comments: [],
     commentsIsLoading: false,
     commentsHasError: false,
+    activeFilter: 'hot',
 };
 
 const postsSlice = createSlice({
@@ -49,9 +50,10 @@ const postsSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder
-            .addCase(fetchPosts.pending, (state) => {
+            .addCase(fetchPosts.pending, (state, action) => {
                 state.isLoading = true;
                 state.hasError = false;
+                state.activeFilter = action.meta.arg || 'hot';
             })
             .addCase(fetchPosts.fulfilled, (state, action) => {
                 state.isLoading = false;
