@@ -4,6 +4,7 @@ import {fetchPosts } from './features/posts/postsSlice';
 
 import { Header } from './components/Header/Header';
 import { PostList } from './components/PostList/PostList';
+import { PostDetailModal } from './components/PostDetailModal/PostDetailModal';
 import './App.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
     <div>
       <Header />
       <PostList />
+      <PostDetailModal />
     </div>
   )
 }
