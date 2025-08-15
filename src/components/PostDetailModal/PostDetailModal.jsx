@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { clearSelectedPost } from '../../features/posts/postsSlice';
 
-export const PostDetailModal = () => {
+const PostDetailModal = () => {
     const { selectedPost, comments, commentsIsLoading } = useSelector((state) => state.posts);
     const dispatch = useDispatch();
 
@@ -34,3 +34,5 @@ export const PostDetailModal = () => {
         </div>
     );
 };
+
+export default PostDetailModal; 

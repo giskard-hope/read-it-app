@@ -13,6 +13,10 @@ export const PostList = () => {
         return <p>Error loading posts. Please Try again</p>;
     }
 
+    if (posts.length === 0) {
+        return <p>No posts found.</p>
+    }
+
     return (
         <main>
             {posts.map((post) => (

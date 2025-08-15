@@ -19,7 +19,13 @@ export const PostCard = ({ post }) => {
             <span>{post.score} votes</span>
             <br></br>
             {post.thumbnail && post.thumbnail.startsWith('http') && (
-                <img src={post.thumbnail} alt="" />
+                <img 
+                    src={post.thumbnail} 
+                    alt="" 
+                    loading="lazy" 
+                    width={post.thumbnail_width}
+                    height={post.thumbnail_height}
+                />
             )}
         </article>
     );
