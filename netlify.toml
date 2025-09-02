@@ -2,3 +2,7 @@
   from = "/api/*"
   to = "https://www.reddit.com/:splat"
   status = 200
+  force = true
+
+  [redirects.headers]
+  User-Agent = "A Web Reddit Client by Miles"
