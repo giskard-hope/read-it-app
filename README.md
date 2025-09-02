@@ -1,12 +1,53 @@
-# React + Vite
+# Read-it: A React & Redux Reddit Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simplified, read-only web client for Reddit built with modern web technologies. This application allows users to browse, search, and filter posts from Reddit's front page and view their comments.
 
-Currently, two official plugins are available:
+**Live Demo Link:** [ [ Netlify URL ] ]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* View the default list of posts from Reddit's front page.
+* Filter posts by "Hot", "New", and "Top".
+* Search for posts by a specific term.
+* Click on a post to view its details and comments in a modal window.
+* Lazy loading for images and code-splitting for performance.
+* Fully responsive design for mobile, tablet, and desktop.
+
+## Technologies Used
+
+* **Framework:** React
+* **State Management:** Redux Toolkit
+* **Build Tool:** Vite
+* **Unit Testing:** Vitest & React Testing Library
+* **E2E Testing:** Cypress
+* **Styling:** CSS
+* **Deployment:** Netlify
+
+## Local Setup & Installation
+
+To run this project on your local machine, follow these steps:
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/giskard-hope/read-it-app
+    ```
+2.  **Navigate into the project directory:**
+    ```bash
+    cd read-it-app
+    ```
+3.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+4.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+
+## Future Work
+
+* Implement user authentication via Reddit OAuth.
+* Add the ability to upvote/downvote posts and comments.
+* Implement infinite scrolling for a smoother browsing experience.
